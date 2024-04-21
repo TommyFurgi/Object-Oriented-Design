@@ -2,6 +2,7 @@ package pl.edu.agh.to.lab4.data;
 
 import pl.edu.agh.to.lab4.FlatIterator;
 import pl.edu.agh.to.lab4.SuspectAggregate;
+import pl.edu.agh.to.lab4.suspects.Person;
 import pl.edu.agh.to.lab4.suspects.Prisoner;
 import pl.edu.agh.to.lab4.suspects.Suspect;
 
@@ -9,7 +10,7 @@ import java.util.*;
 
 public class PrisonerDataProvider implements SuspectAggregate {
 
-    private final Map<String, Collection<Prisoner>> prisoners = new HashMap<>();
+    private Map<String, Collection<Prisoner>> prisoners = new HashMap<>();
 
     public PrisonerDataProvider() {
         addPrisoner("Wiezienie krakowskie", new Prisoner("Jan", "Kowalski", "87080452357", 2005, 7));
@@ -20,6 +21,10 @@ public class PrisonerDataProvider implements SuspectAggregate {
         addPrisoner("Wiezienie przedmiejskie", new Prisoner("Zbigniew", "Nienajedzony", "90051452335", 2011, 1));
         addPrisoner("Wiezienie centralne", new Prisoner("Jan", "Przedziwny", "91103145223", 2009, 4));
         addPrisoner("Wiezienie centralne", new Prisoner("Janusz", "Podejrzany", "85121212456", 2012, 1));
+    }
+
+    public PrisonerDataProvider(Map<String, Collection<Prisoner>> prisoners) {
+        this.prisoners = prisoners;
     }
 
     public Collection<String> getAllPrisons() {

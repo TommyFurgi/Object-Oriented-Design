@@ -34,6 +34,7 @@ public class Prisoner extends Suspect {
     }
 
     public boolean isSuspect() {
+//        System.out.println(judgementYear + sentenceDuration <= getCurrentYear());
         return judgementYear + sentenceDuration <= getCurrentYear();
     }
 
@@ -43,7 +44,8 @@ public class Prisoner extends Suspect {
 
     @Override
     public boolean canBeAccused() {
-        return !isSuspect() && getAge() >= 18;
+        System.out.println(getAge());
+        return isSuspect() && getAge() >= 18;
     }
 
 }

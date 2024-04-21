@@ -24,7 +24,7 @@ public class Finder {
             strategy = new CompositeSearchStrategy(new ArrayList<>());
 
         for (Suspect suspect : dataAggregate.getAllSuspects()) {
-            if (strategy.filter(suspect)) {
+            if (strategy.filter(suspect) && suspect.canBeAccused()) {
                 suspects.add(suspect);
             }
             if (suspects.size() >= 10)
@@ -44,9 +44,9 @@ public class Finder {
         Collection<Suspect> suspects = new ArrayList<>();
 
         for (Suspect sus : dataAggregate.getAllSuspects()) {
-            if (sus.getClass().equals(Prisoner.class) && sus.getFirstName().equals(name))
+            if (sus.getClass().equals(Prisoner.class) && sus.getFirstName().equals(name) && sus.canBeAccused())
                 suspects.add(sus);
-            if (sus.getClass().equals(Person.class) && sus.getFirstName().equals(name))
+            if (sus.getClass().equals(Person.class) && sus.getFirstName().equals(name) && sus.canBeAccused())
                 suspects.add(sus);
             if (suspects.size() >= 10)
                 break;
