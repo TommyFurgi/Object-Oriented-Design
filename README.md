@@ -1,4 +1,4 @@
-# Object-Oriented-Design-lab
+# Object-Oriented-Design
 
 Laboratory tasks performed as part of Object Oriented Design course at AGH UST.  These tasks are implemented using the `Java` programming language. 
 
