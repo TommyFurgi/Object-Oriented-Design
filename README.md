@@ -12,7 +12,7 @@ Laboratory tasks performed as part of Object Oriented Design course at AGH UST. 
 [Instructions](/lab2/task.pdf) (in Polish)
 <hr/>
 
-### [Lab 3 - Refaktoryzacja](/lab3/)
+### [Lab 3 - Code refactoring](/lab3/)
 [Instructions](/lab3/task.pdf) (in Polish)
 <hr/>
 
